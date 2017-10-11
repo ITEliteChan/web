@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+dl dd{
+margin: 0;
+
+}
+dl{
+overflow: hidden;
+height: 20px;
+}
+</style>
+
+<script type="text/javascript">
+var flag = true;
+function list(index){
+	var oDlNode = document.getElementsByTagName("dl");
+	/* alert(oDlNode.nondeName); */
+	var oDlNodep = index.parentNode;
+	for(var a = 0;a<oDlNodes.length;a++){
+		if(oDlnodes[a]==oDlNode){
+			oDlNodes.style.overflow="visible";
+		}else{
+			oDlNodes[a].style.overflow="hidden";
+		}
+	}
+	
+	
+	 /* if(flag){
+	oDlNode.style.overflow="visible";
+	flag = false;
+    }else{
+	oDlNode.style.overflow="hidden";
+	flag = true;
+} */
+}
+</script>
+</head>
+<body>
+
+<dl>
+<dt onclick="list(0)">内容</dt>
+<dd>容1</dd>
+<dd>容2</dd>
+<dd>容3</dd>
+<dd>容4</dd>
+</dl>
+
+<dl>
+<dt onclick="list(1)">内容</dt>
+<dd>容1</dd>
+<dd>容2</dd>
+<dd>容3</dd>
+<dd>容4</dd>
+</dl>
+
+<dl>
+<dt onclick="list(2)">内容</dt>
+<dd>容1</dd>
+<dd>容2</dd>
+<dd>容3</dd>
+<dd>容4</dd>
+</dl>
+
+</body>
+</html>

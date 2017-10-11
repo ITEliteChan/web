@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript" src="Day008.js"></script>
+<script type="text/javascript">
+function Person(val1,val2){
+	this.name = val1;
+	this.age = val2;
+	Person.prototype.eat = function(){
+		alert("吃饭");
+	}
+}
+
+var person = new Person("陈豪",23);
+println(person.name);
+println(person.age)
+person.eat();
+for(a in person){
+	document.write(person[a] + "<br/>");
+}
+
+
+
+</script>
+</body>
+</html>

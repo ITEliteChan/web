@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+var a = 10;
+/* alert(typeof(a));
+var b = "eaff";
+alert(typeof(b)); */
+document.write("hello <br/>");
+document.write(2+'<br/>');
+
+
+for(var a = 9;a>0;a--){
+	for(var b = 1; b<=a;b++){
+	document.write(a+"x"+b+"="+a*b+"\t")		
+	}
+	document.write('<br/>')
+}
+
+var arr = [1,2,3];
+alert(arr);
+alert(arr.length);
+alert(arr[3]);
+
+
+/* 方法 */
+function add(){
+	/* return 100; */
+	alert("hello");
+}
+/* var a = add();/*声明变量 得到返回值 */
+
+/* alert(add()); */ 
+var a = function(){
+	alert("吃中午饭")
+	
+}
+function add(x,y){
+	alert("传进来的参数数组长度为："+arguments.length)
+	alert(arguments[arguments.length-2])/* 取数组后面两位，-1或者-2 */
+	alert(x+":::"+y)
+}
+add(3,5,8)
+</script>
+<input type="button" onclick="a()" value="按钮">
+</body>
+</html>

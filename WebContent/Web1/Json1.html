@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+function println(val){
+	document.write(val+"<br>");
+}
+
+<!--json基本格式  -->
+var json_array_a={"city":"beijing","street":"dongcheng","postcode":"123456"};
+println(json_array_a.city);
+println(json_array_a.street);
+println(json_array_a.postcode);
+/* json嵌套格式 */
+var json_array_b=[{"name":"wangjinyang","address":{"city":"成都","street":"高新","postcode":"123456"}},];
+
+println(json_array_b[0].name+"所在城市:"+json_array_b[0].address.street);
+//json数组格式
+var json_array_c=[
+	{"name":"张三","address":{"city":"成都","street":"高新","postcode":"123456"}},
+	{"name":"李四","address":{"city":"宜宾","street":"巡场","postcode":"123456"}},
+]
+println("第一位成员的名字="+json_array_c[0].name);
+println("第一位成员的城市="+json_array_c[0].address.city);
+</script>
+</body>
+</html>

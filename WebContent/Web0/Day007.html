@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript" src="Day008.js"></script>
+<script type="text/javascript">
+/* for(var x = 0; x <=3;x++){
+	
+}
+function add(){//方法体 局部变量
+	var a = 9;
+	x = 8;
+}
+alert(a);//报错，没有找到这个变量
+alert(x); */
+
+
+
+
+/*  var str = "abcdef"; */
+/* println(str.charAt("1"));
+println(str.replace("f","sdkfgkd"));
+	/* println(str.charAt(1)); */
+	/* toCharArray(str); */ 
+	/* reverse(str); */
+ var str = "a bcdef";
+	println(blanks(str));
+	println(toCharArray(str));
+	println(reverse(str));
+	
+//数组	
+function toCharArray(str){
+		var arr = [];
+		for(var i = 0;i<str.length;i++){
+			arr[i] =str.charAt(i);
+		}
+		return arr;
+	}	
+//反向	
+	function reverse(str){
+		var arr = [];
+		for(var i = str.length-1;i>=0;i--){
+		document.write(str.charAt(i));
+		}
+		return arr;
+	}
+	
+//去除空格
+	function blanks(str){
+		var start,end;
+		start = 0;
+		end = str.length-1;
+		while(start<=end&&str.charAt(start)==" "){
+			start++;
+			}
+		while(start<=end&&str.charAt(start)==" "){
+			end--;
+		}
+		return str.substring(start,end);
+		}
+
+</script>
+</body>
+</html>

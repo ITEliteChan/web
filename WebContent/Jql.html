@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var id = $("input:eq(0)");
+            var name = $("input:eq(1)");
+            var age = $("input:eq(2)");
+            var table = $("table");
+            $("#btnAdd").click(function() {
+                table.append("<tr></tr>");
+                var tr = $("tr:last");
+                var td1 = tr.append("<td><input type='checkbox'></td>");
+                var td2 = tr.append("<td>" + id.val() + "</td>");
+                var td3 = tr.append("<td>" + name.val() + "</td>");
+                var td4 = tr.append("<td>" + age.val() + "</td>");
+                var td5 = tr.append("<td><input type='button' value='删除'></td>");
+                tr.children("td:last").children().click(function() {
+                    tr.remove();
+                })
+            });
+            $("#b1").click(function() {
+
+                $(":checkbox").attr("checked", true);
+            });
+            $("#b2").click(function() {
+                $("input:checkbox").attr("checked", false);
+            });
+            $("#b3").click(function() {
+                $("input:checkbox").each(function() {
+                    if ($(this).attr("checked")) {
+                        $(this).parent().parent().remove();
+                    };
+                });
+            });
+            $("#b4").click(function() {
+                var va = [];
+                for (var i = 0; i < $("tr:gt(0)").length; i++) {
+
+                    va[i] = $("tr:eq(" + (i + 1) + ")");
+                }
+                for (var j = 0; j < va.length - 1; j++) {
+                    for (var k = 0; k < va.length - j - 1; k++) {
+                        if (parseInt(va[k].children("td:eq(3)").html()) > parseInt(va[k + 1].children("td:eq(3)").html())) {
+                            var temp = va[k + 1];
+                            va[k + 1] = va[k];
+                            va[k] = temp;
+                        }
+                    }
+                }
+                for (var j = 0; j < va.length; j++) {
+                    table.append(va[j]);
+                }
+            })
+        });
+    </script>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        th {
+            width: 200px;
+        }
+
+        #div1 {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #box1 {
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        学号：<input type="text" id="in1"> 姓名：
+        <input type="text" id="in2"> 年龄：
+        <input type="text" id="in3">
+        <input type="button" value="添加" id="btnAdd">
+    </div><br>
+    <table border="1">
+        <tr>
+            <th>选择</th>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>操作</th>
+        </tr>
+    </table>
+    <div id="box1">
+        <input type="button" value="全选" id="b1">
+        <input type="button" value="全不选" id="b2">
+        <input type="button" value="删除选中" id="b3">
+        <input type="button" value="排序" id="b4">
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+div{/*标签选择器 */
+border: solid 1px;
+width: 1200px;
+height:600px;
+background: blue;
+}
+div.d2{/* 类选择器 */
+	background: yellow;
+}
+div.di3{
+	background-image:url("/Users/admin/eclipse-workspace/web/WebContent/img/ABS.jpg") ;background-repeat:no-repeat;
+	background-size:100% 100%;-moz-background-size:100% 100%;
+	font-size:30px;
+	color:red
+}
+div span{
+	font-size: 20px;
+}

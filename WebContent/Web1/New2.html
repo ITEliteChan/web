@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+width: 400px;
+height: 300px;
+background-color: aqua;
+}
+table tr td{
+border: black solid 1px;
+
+}
+</style>
+<script type="text/javascript">
+function add(){
+	var oTable= document.createElement("table");
+	var oTr = document.createElement("tr");
+	var oTd = document.createElement("td");
+	oTd.innerHTML = "早上好";
+	oTr.appendChild(oTd);
+	oTable.appendChild(oTr);
+
+	var oDiv = document.getElementsByTagName("div")[0];
+	oDiv.appendChild(oTable);
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="add()" value="添加"><br>
+<lable>请输入行数:</lable><input type="text" id="hang"><br>
+<lable>请输入列数:</lable><input type="text" id="lie">
+<hr>
+<div></div>
+</body>
+</html>

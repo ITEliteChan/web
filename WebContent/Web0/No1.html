@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="St.js"></script>
+<style type="text/css">
+.mi{
+font-size:20px;
+text-align: center;
+}
+table{
+margin: 0 auto;
+margin-top: 30px;
+height: 50px;
+width: 900px;
+border-collapse:collapse;
+}
+body{
+text-align: center;
+}
+.mn{
+margin-left:40px;
+margin-top:30px;
+background-color: gray;
+height: 50px;
+width: 150px;
+font-size: 20px;
+}
+</style>
+</head>
+<body>
+<div class="mi">
+
+<span>学号:</span>
+<input id= "num" type="text"/>
+<span>姓名:</span>
+<input id="name" type="text"/>
+<span>年龄:</span>
+<input id= "age" type="text"/>
+
+<input type="button" value="添加"  onclick="app()"/>
+
+<table id="kl" border="1">
+<tr>
+<td>选择</td>
+<td>学号</td>
+<td>姓名</td>
+<td>年龄</td>
+<td>操作</td>
+</tr>
+</table >
+</div>
+<input class="mn" type="button" value="全选"/>
+<input class="mn" type="button" value="全不选"/>
+<input class="mn" type="button" value="删除选中"/>
+</body>
+</html>

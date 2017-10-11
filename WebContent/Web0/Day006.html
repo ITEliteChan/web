@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript" src="Day008.js"></script>
+<script type="text/javascript">
+
+
+
+
+function app(){
+	var odivNode = document.getElementsByName("name1");
+	alert(odivNode[1].value);
+}
+function tiao(){
+	/* var arg = location.pathname;
+	alert(arg); */
+	
+	/*location.href = "http://www.baidu.com"; */
+	
+	/* location.assign("Day009.html"); */
+	
+/* 	var odivNode = document.getElementById("divId");
+	odivNode.innerHTML += "改掉Div里面的值"; */
+	
+	
+}
+function add(){
+	mywindow=window.open("",null,"height=200,width=400,status=yes,toolbar=yes,menubar=yes,location=yes");
+}
+
+function settime(){
+	 /* setTimeout("add",2000); */
+	setInterval("add",2000)
+}
+function stop(){
+	clearInterval(interval);
+}
+fu
+	nction move() {
+		for (var i = 0; i < 100; i++) {
+			mywindow.moveBy(-40, 0);
+			mywindow.moveBy(0, -40);
+			mywindow.moveBy(50, 0);
+			mywindow.moveBy(0, 50);
+		}
+	}
+	function contrm() {
+		var ch = confirm("你选择确定还是取消？");
+		alert(ch);
+	}
+</script>
+<input type="button" value = 按钮 onclick= "add()"/>
+<input type="button" value="stop" onclick="stop()"/>
+<input type="button" value="事件" onclick="move()"/>
+<input type="button" value="选择" onclick="contrm()"/>
+<input type="button" value="跳转" onclick="tiao()"/>
+<input type="button" value="获取" onclick="app()"/>
+<div id="divId">我的dvi</div>
+<input type="text" name = "name1" value = "1" >
+<input type="text" name = "name1" value = "2" >
+<input type="text" name = "name1" value = "3" >
+</body>
+</html>
